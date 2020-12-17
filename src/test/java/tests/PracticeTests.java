@@ -86,10 +86,8 @@ public class PracticeTests {
 	}
 	
 	@Test
-	public void test3() {
+	public void test3() throws InterruptedException{
 		// Click menu button
-		MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("Open navigation drawer");
-		el1.click();
 		MobileElement el2 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/fab");
 		el2.click();
 		MobileElement el3 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/etNewShowTitle");
@@ -128,21 +126,18 @@ public class PracticeTests {
 		el17.click();
 		MobileElement el18 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/btSaveDatesShow");
 		el18.click();
-		/*
-		MobileElement element1 = (MobileElement) driver.findElementByAccessibilityId("Open navigation drawer");
-		element1.click();
-		MobileElement element2 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.CheckedTextView");
-		element2.click();
+		
 		MobileElement element3 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/btMainListShows");
 		element3.click();
 		List<MobileElement> list = (List<MobileElement>) driver.findElementsById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/tv_nom_row");
 		boolean exist = false;
 		for(int i= 0; i<list.size(); i++) {
 			MobileElement me = list.get(i);
-			if(me.getText() == "NUEVA OBRA") exist = true;
+			System.out.println(me.getText());
+			if(me.getText().equals("NUEVA OBRA")) exist = true;
 		}
 		assertEquals(exist,true);
-		*/
+		
 	}
 	
 	@After
